@@ -27,7 +27,11 @@
 </script>
     
 
-<THR.DirectionalLight shadow intensity={0.6} position={{ x: 3, y: 5, z: 3 }} target={{ x: 1 }} />
+<THR.DirectionalLight 
+  shadow intensity={0.6} 
+  position={{ x: 3, y: 5, z: 3 }} 
+  target={{ x: 1 }} 
+  />
 
 <THR.AmbientLight />
 
