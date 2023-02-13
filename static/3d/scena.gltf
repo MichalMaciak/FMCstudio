@@ -1,0 +1,393 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.4.50",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_draco_mesh_compression",
+        "KHR_texture_transform",
+        "KHR_materials_specular",
+        "KHR_materials_ior"
+    ],
+    "extensionsRequired" : [
+        "KHR_draco_mesh_compression",
+        "KHR_texture_transform"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1,
+                2
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "BezierCurve",
+            "rotation" : [
+                0,
+                -0.709369957447052,
+                0,
+                0.704836368560791
+            ],
+            "translation" : [
+                -2.5526628494262695,
+                0.1795063018798828,
+                -2.3777554035186768
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "sciana",
+            "rotation" : [
+                0.5016003251075745,
+                -0.5016002655029297,
+                -0.49839451909065247,
+                0.49839454889297485
+            ],
+            "translation" : [
+                4.082883834838867,
+                0.007311619818210602,
+                -4.014625549316406
+            ]
+        },
+        {
+            "mesh" : 2,
+            "name" : "FMC",
+            "rotation" : [
+                0.7070906758308411,
+                0.00477367639541626,
+                -0.004773676861077547,
+                0.7070906758308411
+            ],
+            "translation" : [
+                -3.3099684715270996,
+                0.4450823664665222,
+                -2.911120891571045
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_specular" : {
+                    "specularColorTexture" : {
+                        "extensions" : {
+                            "KHR_texture_transform" : {
+                                "offset" : [
+                                    0,
+                                    -3.999999925494195
+                                ],
+                                "scale" : [
+                                    4.999999925494195,
+                                    4.999999925494195
+                                ]
+                            }
+                        },
+                        "index" : 0
+                    },
+                    "specularColorFactor" : [
+                        2.1388717290110644,
+                        2.1388717290110644,
+                        2.1388717290110644
+                    ]
+                },
+                "KHR_materials_ior" : {
+                    "ior" : 1.4500000476837158
+                }
+            },
+            "name" : "beton",
+            "normalTexture" : {
+                "extensions" : {
+                    "KHR_texture_transform" : {
+                        "offset" : [
+                            0,
+                            -3.999999925494195
+                        ],
+                        "scale" : [
+                            4.999999925494195,
+                            4.999999925494195
+                        ]
+                    }
+                },
+                "index" : 1
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "extensions" : {
+                        "KHR_texture_transform" : {
+                            "offset" : [
+                                0,
+                                -3.999999925494195
+                            ],
+                            "scale" : [
+                                4.999999925494195,
+                                4.999999925494195
+                            ]
+                        }
+                    },
+                    "index" : 2
+                },
+                "metallicFactor" : 0
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_specular" : {
+                    "specularColorFactor" : [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                "KHR_materials_ior" : {
+                    "ior" : 1.4500000476837158
+                }
+            },
+            "name" : "napis",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.017620235681533813,
+                    0.0523674413561821,
+                    0.8000000715255737,
+                    1
+                ],
+                "metallicFactor" : 0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "BezierCurve.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
+                    },
+                    "extensions" : {
+                        "KHR_draco_mesh_compression" : {
+                            "bufferView" : 0,
+                            "attributes" : {
+                                "POSITION" : 0,
+                                "TEXCOORD_0" : 1,
+                                "NORMAL" : 2
+                            }
+                        }
+                    },
+                    "indices" : 3,
+                    "mode" : 4
+                }
+            ]
+        },
+        {
+            "name" : "Cube.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "TEXCOORD_0" : 5,
+                        "NORMAL" : 6
+                    },
+                    "extensions" : {
+                        "KHR_draco_mesh_compression" : {
+                            "bufferView" : 1,
+                            "attributes" : {
+                                "POSITION" : 0,
+                                "TEXCOORD_0" : 1,
+                                "NORMAL" : 2
+                            }
+                        }
+                    },
+                    "indices" : 7,
+                    "material" : 0,
+                    "mode" : 4
+                }
+            ]
+        },
+        {
+            "name" : "Text",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 8,
+                        "TEXCOORD_0" : 9,
+                        "NORMAL" : 10
+                    },
+                    "extensions" : {
+                        "KHR_draco_mesh_compression" : {
+                            "bufferView" : 2,
+                            "attributes" : {
+                                "POSITION" : 0,
+                                "TEXCOORD_0" : 1,
+                                "NORMAL" : 2
+                            }
+                        }
+                    },
+                    "indices" : 11,
+                    "material" : 1,
+                    "mode" : 4
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "Image",
+            "uri" : "Image.png"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "CityStreetAsphaltGenericCracked002_NRM_1K.jpg",
+            "uri" : "../texture/CityStreet/CityStreetAsphaltGenericCracked002_NRM_1K.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "CityStreetAsphaltGenericCracked002_COL_1K.jpg",
+            "uri" : "../texture/CityStreet/CityStreetAsphaltGenericCracked002_COL_1K.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "count" : 2891,
+            "max" : [
+                2.344416856765747,
+                0.021506845951080322,
+                0.2554367482662201
+            ],
+            "min" : [
+                -0.5211605429649353,
+                -0.26304101943969727,
+                -0.07132551074028015
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 2891,
+            "type" : "VEC2"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 2891,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5123,
+            "count" : 16704,
+            "type" : "SCALAR"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 44,
+            "max" : [
+                0.8063862323760986,
+                3.985461711883545,
+                10.625494956970215
+            ],
+            "min" : [
+                -4.8511433601379395,
+                -0.08816415071487427,
+                -8.58306884765625e-06
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 44,
+            "type" : "VEC2"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 44,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5123,
+            "count" : 66,
+            "type" : "SCALAR"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 4148,
+            "max" : [
+                4.421000003814697,
+                0.05000000074505806,
+                0.009000000543892384
+            ],
+            "min" : [
+                0.07600000500679016,
+                -0.05000000074505806,
+                -0.6910000443458557
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 4148,
+            "type" : "VEC2"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 4148,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5123,
+            "count" : 7068,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 11919,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 476,
+            "byteOffset" : 11920
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 19108,
+            "byteOffset" : 12396
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 31504,
+            "uri" : "scena.bin"
+        }
+    ]
+}

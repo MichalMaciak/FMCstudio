@@ -15,7 +15,7 @@
   const offsetXLight = spring($pointer.x * 10)
 	$: offsetXLight.set($pointer.x * 5)
 
-  const { gltf } = useGltf('/3d/logo.gltf', {
+  const { gltf } = useGltf('/3d/scena.gltf', {
     useDraco: true
   })
 	const logoGeometry = derived(gltf, (gltf) => {
@@ -51,11 +51,12 @@
   color = {new Three.Color("rgb(189, 189, 189)")} 
   shadow = {{
     mapSize: [2048 ,2048],
-    bias: 0.1,
+    bias: 1,
     radius: 1
   }}
   intensity={3}
   position={{ x: $offsetXLight, y: 1.5, z: 2 }} 
+  
 />
 
 <THR.AmbientLight 
