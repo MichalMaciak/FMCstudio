@@ -15,7 +15,7 @@
   const offsetXLight = spring($pointer.x * 10)
 	$: offsetXLight.set($pointer.x * 5)
 
-  const { gltf } = useGltf('/3d/fmcstudio.gltf', {
+  const { gltf } = useGltf('/3d/logo.gltf', {
     useDraco: true
   })
 	const logoGeometry = derived(gltf, (gltf) => {
@@ -67,22 +67,20 @@
 <THR.PerspectiveCamera fov={35} position={{ x: 0, y: 1, z: 5}}>
   <THR.OrbitControls 
   enableDamping
-  enableZoom = {false}
-  maxAzimuthAngle = {0.1}
-  maxPolarAngle = {5/Math.PI}
-  minAzimuthAngle = {-0.1}
-  minPolarAngle = {3/Math.PI}
+  
   />
 </THR.PerspectiveCamera>
 
 {#if $gltf}
   <THR.Object3DInstance 
-  object = {$gltf.nodes['STUDIO']} 
+  object = {$gltf.nodes['Scene']} 
   position = {{x:0, y: 0, z: 0}}
   scale = {1.5}
   castShadow
+  receiveShadow
   
   />
+  <!-- 
   <THR.Mesh 
     receiveShadow
     geometry={new Three.PlaneGeometry(20, 3)}
@@ -119,7 +117,7 @@
     rotation ={{x: 90}}
   />
 
-
+ -->
 
 
 {/if}
