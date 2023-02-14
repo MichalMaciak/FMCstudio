@@ -7,29 +7,28 @@
 	import Logo from '$lib/3d/Logo.svelte';
 	import Tv from '$lib/3d/Tv.svelte';
     import * as THR from '@threlte/core';
-    import * as Three from 'three'
 
 </script>
 
 
 <div class="canvas-wrapper-logo">
 	<THR.Canvas 
-        rendererParameters = {{antialias: true}} 
         shadows
-        dpr={1}
-    >
+        rendererParameters = {{antialias: true}} 
+    >   
         <Logo/>
+        
     </THR.Canvas>     
 </div>
 
 
 
 
+
 <div class="canvas-wrapper-tv">
 	<THR.Canvas 
+        shadows
         rendererParameters = {{antialias: true}} 
-        shadows 
-        dpr={1}
     >
         <Tv/>
     </THR.Canvas>     
@@ -41,7 +40,7 @@
    
     .canvas-wrapper-logo {
         position: relative;
-		height: 350px;
+		height: 100vh;
         width: 100vw;
     }
 
