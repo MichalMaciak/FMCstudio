@@ -5,50 +5,46 @@
 
 <script>
 	import Logo from '$lib/3d/Logo.svelte';
-	import Tv from '$lib/3d/Tv.svelte';
+    import OpenTag from '$lib/OpenTag.svelte';
     import * as THR from '@threlte/core';
+    import * as Three from 'three'
 
 </script>
 
 
-<div class="canvas-wrapper-logo">
+<section class="canvas-wrapper-logo">
 	<THR.Canvas 
-        shadows
-        rendererParameters = {{antialias: true}} 
+        shadows 
+        rendererParameters = {{antialias: true}}
+        shadowMapType = {Three.VSMShadowMap}
     >   
         <Logo/>
         
     </THR.Canvas>     
-</div>
+</section>
 
-
-
-
-
-<div class="canvas-wrapper-tv">
-	<THR.Canvas 
-        shadows
-        rendererParameters = {{antialias: true}} 
-    >
-        <Tv/>
-    </THR.Canvas>     
-</div>
-
+<section class="wrapper-OpenTag">
+    <OpenTag /> 
+</section>
 
 
 <style>
-   
     .canvas-wrapper-logo {
         position: relative;
 		height: 100vh;
         width: 100vw;
     }
 
+    .wrapper-OpenTag {
+        position: fixed;
+        width: 25%;
+        bottom: 0;
+        right: 0;
+        z-index: 9999;
+        background-color: aliceblue;
+        padding: 10rem;
+    }
+    
 
 
-	.canvas-wrapper-tv {
-        position: relative;
-		height: 50vh;
-		width: 50vw;
-	}
 </style>
