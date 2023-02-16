@@ -1,70 +1,84 @@
-<script lang="ts">  
-	import * as THR from '@threlte/core';
-  import type * as Three from 'three';
+<script lang="ts">
+  import * as THR from '@threlte/core';
+  import * as Three from 'three';
 
-	import { GLTF, HTML, useGltf} from '@threlte/extras';
-  import { derived } from 'svelte/store';
-  import { spring } from 'svelte/motion';
+  const videoPW = document.createElement('video');
+    videoPW.src ='/video/Innovation.mp4';
+    videoPW.poster ='/img/tlo.jpg'
+    videoPW.controls = true;
+    videoPW.muted = false;
+    videoPW.height = 240; // in px
+    videoPW.width = 320; // in px */
 
-  const { pointer } = THR.useThrelte()
-  let tv = {
-    position: { x:0, y:0, z:0}
+
+    const VideoPolendWeekly = new Three.VideoTexture( videoPW ) 
+
+    const onPlay = (e: CustomEvent<THR.ThreltePointerEvent>) => {
+    if (videoPW.paused) {
+      videoPW.play();    
+    }
+    else {
+      videoPW.pause();;
+    }
   }
-  const offsetX = spring($pointer.x * 10)
-	$: offsetX.set($pointer.x * 0.5)
-	const offsetY = spring($pointer.y * 10)
-	$: offsetY.set($pointer.y * 0.5)
-
-  const { gltf } = useGltf('/3d/tv.gltf', {
-    useDraco: true
-  })
-
-	const tvGeometry = derived(gltf, (gltf) => {
-		if (!gltf) return
-		return (gltf.nodes.body as Three.Mesh).geometry,(gltf.nodes.screen as Three.Mesh).geometry
-	})
-
 </script>
+
+<THR.Mesh
+  rotation = {{y: -Math.PI / 2}}
+  position = {{x:7.7, y:1.6, z: 2.8}}
+  geometry = {new Three.PlaneGeometry(2.50,1.50)}
+  material = {new Three.MeshStandardMaterial({
+    map: VideoPolendWeekly
+  })}
     
-
-<THR.DirectionalLight 
-  shadow intensity={0.6} 
-  position={{ x: 3, y: 5, z: 3 }} 
-  target={{ x: 1 }} 
-  />
-
-<THR.AmbientLight />
-
-<THR.PerspectiveCamera fov={50} position={{ x: $offsetX, y: -$offsetY, z: 2}}>
-  <THR.OrbitControls 
-  enableDamping
-  enableZoom = {false}
-  maxAzimuthAngle = {0.5}
-  maxPolarAngle = {6/Math.PI}
-  minAzimuthAngle = {-0.5}
-  minPolarAngle = {4/Math.PI}
-  />
-</THR.PerspectiveCamera>
+  interactive on:click={onPlay}
+/>
 
 
-{#if $gltf}
-  <THR.Object3DInstance 
-  object={$gltf.nodes['body']} 
-  {... tv}
-  />
+<THR.Mesh
+  rotation = {{y: -Math.PI / 2}}
+  position = {{x:7.7, y:1.6, z: 5.46}}
+  geometry = {new Three.PlaneGeometry(2.50,1.50)}
+  material = {new Three.MeshStandardMaterial({
+    map: VideoPolendWeekly
+  })}
+  interactive on:click={onPlay}
+/>
 
-  <THR.Object3DInstance 
-  object={$gltf.nodes['screen']} 
-  {... tv}
-  />
- 
-{/if}
-<!-- <GLTF 
-  url="/3d/tv3.gltf" 
-  interactive
-  castShadow 
-  receiveShadow
-  {... tv}
-  />
 
- -->
+<THR.Mesh
+  rotation = {{y: -Math.PI / 2}}
+  position = {{x:7.7, y:1.6, z: 8.14}}
+  geometry = {new Three.PlaneGeometry(2.50,1.50)}
+  material = {new Three.MeshStandardMaterial({
+    map: VideoPolendWeekly
+  })}
+  interactive on:click={onPlay}
+/>
+<THR.Mesh
+  rotation = {{y: -Math.PI / 2}}
+  position = {{x:7.7, y:3.15, z: 2.8}}
+  geometry = {new Three.PlaneGeometry(2.50,1.50)}
+  material = {new Three.MeshStandardMaterial({
+    map: VideoPolendWeekly
+  })}
+  interactive on:click={onPlay}
+/>
+<THR.Mesh
+  rotation = {{y: -Math.PI / 2}}
+  position = {{x:7.7, y:3.15, z: 5.46}}
+  geometry = {new Three.PlaneGeometry(2.50,1.50)}
+  material = {new Three.MeshStandardMaterial({
+    map: VideoPolendWeekly
+  })}
+  interactive on:click={onPlay}
+/>
+<THR.Mesh
+  rotation = {{y: -Math.PI / 2}}
+  position = {{x:7.7, y:3.15, z: 8.14}}
+  geometry = {new Three.PlaneGeometry(2.50,1.50)}
+  material = {new Three.MeshStandardMaterial({
+    map: VideoPolendWeekly
+  })}
+  interactive on:click={onPlay}
+/>

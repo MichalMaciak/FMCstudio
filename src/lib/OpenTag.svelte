@@ -1,8 +1,8 @@
-<h1> Studio filmowe zaprasza do wsłpracy</h1>
+<h1> Studio filmowe zaprasza do współpracy</h1>
 
 <style>
     h1 {
-        background-color: aliceblue;
+        color:  rgb(241, 241, 241);
     }
 
 </style>
