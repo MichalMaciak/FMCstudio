@@ -2,7 +2,7 @@
 //import { vitePreprocess } from '@sveltejs/kit/vite';
 import sequence from 'svelte-sequential-preprocessor'
 import preprocess from 'svelte-preprocess'
-//import seqPreprocessor from 'svelte-sequential-preprocessor'
+import seqPreprocessor from 'svelte-sequential-preprocessor'
 import { preprocessThrelte } from '@threlte/preprocess'
 
 /** @type {import('@sveltejs/kit').Config} */

@@ -8,9 +8,9 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-static/video/Innovation.mp4
-static/video/Innovation copy 2.mp4
-static/video/Innovation copy 3.mp4
-static/video/Innovation copy 4.mp4
-static/video/Innovation copy 5.mp4
-static/video/Innovation copy.mp4
+static/video/cheda.mp4
+static/video/kolek.mp4
+static/video/PW.mp4
+static/video/tomczyk.mp4
+static/video/wojciechowski.mp4
+static/video/ziobrowski.mp4

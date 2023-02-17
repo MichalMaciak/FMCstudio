@@ -4,12 +4,14 @@
 
 
 <script>
-	import Studia from '$lib/3d/Studia.svelte';
 	import Theatre from '$lib/3d/Theatre.svelte';
     import OpenTag from '$lib/OpenTag.svelte';
     import * as THR from '@threlte/core';
     import * as Three from 'three'
-
+    import { Vector2 } from 'three';
+    import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass'
+    import { SAOPass } from 'three/examples/jsm/postprocessing/SAOPass'
+    
 
 </script>
 
@@ -20,8 +22,9 @@
         frameloop = {'always'}
         shadows 
         rendererParameters = {{antialias: true}}
-        shadowMapType = {Three.VSMShadowMap}
-    >   
+        shadowMapType = {Three.VSMShadowMap}>
+        <THR.Pass pass={new UnrealBloomPass(new Vector2(1024, 1024), 0.15, 0.15, 0.7)} /> 
+        <THR.Pass pass={new SAOPass(new Three.Scene, new Three.Camera, false, false, new Vector2(256, 256))} /> 
         <Theatre/> 
        
     </THR.Canvas>     

@@ -16,7 +16,8 @@
 	const offsetY = spring($pointer.y * 10)
 	$: offsetY.set($pointer.y * 5)
     
-  const colorLight = new Three.Color( 0xb5b5b5 )
+  const colorLight = new Three.Color( "rgb(204, 240, 255)" )
+  const colorSpotLight = new Three.Color( "rgb(138, 187, 255)" )
 
     
 </script>
@@ -35,7 +36,7 @@
 
 <THR.DirectionalLight 
   color = {colorLight}  
-  intensity={1}
+  intensity={2}
   position={{ x: -10, y: 3, z: 5}} 
   target={{ x: 1 }}
   shadow = {{
@@ -45,42 +46,54 @@
 />
 
 <THR.SpotLight 
+  color = {colorSpotLight} 
   position={{ x: -2, y: 5, z:2 }} 
   target={{x:$offsetX}}
   angle = {45}
   distance = {15}
   intensity = {3}
   penumbra = {1}
+  shadow = {{
+    mapSize: [256, 256],
+    radius: 5
+  }}
   
 
 />
 
 <THR.SpotLight 
+  color = {colorSpotLight} 
   position={{ x: 4, y: 5, z:2 }} 
   target={{x:$offsetX, z:$offsetY}}
   angle = {45}
   distance = {15}
   intensity = {3}
   penumbra = {1}
+  shadow = {{
+    mapSize: [256, 256],
+    radius: 5
+  }}
  
 />
 
 
 <THR.PerspectiveCamera 
   fov={25} 
-  position={{ x: -10, y:4, z: 10}}
+  position={{ x: -11, y:4, z: 10}}
   lookAt={{}}
   castShadow
 >
 <THR.OrbitControls 
     enableDamping 
     target = {{y:2, z:5}}
-    enableZoom = {false}
     enablePan = {false}
+    enableZoom = {false}
+   
     maxAzimuthAngle = {-0.5}
     maxPolarAngle = {1.4}
     minAzimuthAngle = {-1.4}
     minPolarAngle = {1}
+  
     
   />
 </THR.PerspectiveCamera>

@@ -3,7 +3,25 @@
     import { Text } from '@threlte/extras'
     import * as THR from '@threlte/core';
     import * as Three from 'three';
-    let value = 'Helow world'
+   
+
+    let stduio1 = 'Studio 1 - 4m2'
+    let stduio2 = 'Studio 2 - 25m2'
+    let stduio3 = 'Studio 3 - 50m2'
+
+    let studioColor 
+
+     
+    const onStudio1 = (e: CustomEvent<THR.ThreltePointerEvent>) => {
+    if (studioColor != "red") {
+      studioColor = "red"   
+    }}
+
+    const onStudio1leave = (e: CustomEvent<THR.ThreltePointerEvent>) => {
+    if (studioColor != "black") {
+      studioColor = "black"   
+    }}
+
 </script>
 
 
@@ -16,26 +34,25 @@
   receiveShadow
     
 >
-    <Text text={value} 
-        position = {{x:-2, y:1, z: 0.3}}
+    <Text text={stduio1} 
+        position = {{x:-2, y:1.3, z: 0.3}}
+        fontSize = {0.5}
+        color = {studioColor}
+        interactive on:pointerenter={onStudio1} on:pointerleave={onStudio1leave}
+    />
+
+    
+
+    <Text text={stduio2} 
+        position = {{x:-2, y:0.4, z: 0.3}}
+        fontSize = {0.5}
+        color = {"black"}
+    />
+
+    <Text text={stduio3} 
+        position = {{x:-2, y:-0.5, z: 0.3}}
         fontSize = {0.5}
         color = {"black"}
     />
 
 </THR.Mesh>
-
-   <!--  
-     <HTML position={{ x: 2, y:1, z:4 }} 
-        transform 
-        occlude
-        
-        portal={document.body}
-        zIndexRange = {[1, 8]}
-        as = {"div"}
-        eps = {0.01}
-    >
-        <h1>Hello World</h1>
-        
-    </HTML> -->
-    
-
