@@ -1,17 +1,23 @@
 <script lang="ts">
-    import { useGltf } from '@threlte/extras'; 
-    import { derived } from 'svelte/store';
-    import * as THR from '@threlte/core';
-    import type * as Three from 'three';
+  import { useGltf } from '@threlte/extras'; 
+  import { derived } from 'svelte/store';
+  import * as THR from '@threlte/core';
+  import type * as Three from 'three';
+  import { onMount, onDestroy } from 'svelte'
 
-    const { gltf } = useGltf('/3d/scena.gltf', {
-    useDraco: true
+  const { gltf } = useGltf('/3d/scena.gltf', {
+  useDraco: true
   })
-	const logoGeometry = derived(gltf, (gltf) => {
-		if (!gltf) return
-		return (gltf.nodes.STUDIO as Three.Mesh).geometry
-	})
 
+  onMount(async () => {
+	const logoGeometry = derived(gltf, (gltf) => {
+    if (!gltf) return
+      return (gltf.nodes.STUDIO as Three.Mesh).geometry
+    })
+  });
+
+  
+  
 
 </script>
 
@@ -24,7 +30,7 @@
   scale = {0.8}
   castShadow
   receiveShadow
-  position = {{x:-2, y:0.5, z:3}}
+  position = {{x:2, y:0.2, z:3}}
   />
 
   <THR.Object3DInstance 
@@ -50,6 +56,14 @@
   <THR.Object3DInstance 
   dispose
   object = {$gltf.nodes['krata2']} 
+  scale = {1}
+  receiveShadow
+  castShadow
+  />
+
+  <THR.Object3DInstance 
+  dispose
+  object = {$gltf.nodes['krata3']} 
   scale = {1}
   receiveShadow
   castShadow

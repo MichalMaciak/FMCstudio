@@ -16,8 +16,13 @@
 	const offsetY = spring($pointer.y * 10)
 	$: offsetY.set($pointer.y * 5)
     
-  const colorLight = new Three.Color( "rgb(204, 240, 255)" )
+  
   const colorSpotLight = new Three.Color( "rgb(138, 187, 255)" )
+
+  const colorLight = new Three.Color( "rgb(204, 240, 255)" )
+  
+ 
+
 
     
 </script>
@@ -25,25 +30,16 @@
 <THR.DirectionalLight 
   color = {colorLight} 
   intensity={2}
-  position={{ x: 5, y: 3, z: 6 }} 
+  position={{ x: -2, y: 3, z: 6 }} 
   target={{ x: 1 }}
   shadow = {{
-    mapSize: [1024, 1024],
-    camera: {left: 10, right: -10, top: 10, bottom: -5, near: 0.5, far: 20}
+    mapSize: [512, 512],
+    camera: {left: 12, right: -12, top: 10, bottom: -5, near: 0.5, far: 25}
   }}
   
 />
 
-<THR.DirectionalLight 
-  color = {colorLight}  
-  intensity={2}
-  position={{ x: -10, y: 3, z: 5}} 
-  target={{ x: 1 }}
-  shadow = {{
-    mapSize: [1024, 1024],
-    camera: {left: 10, right: -10, top: 10, bottom: -5, near: 0.5, far: 20}
-  }}
-/>
+
 
 <THR.SpotLight 
   color = {colorSpotLight} 
@@ -79,9 +75,10 @@
 
 <THR.PerspectiveCamera 
   fov={25} 
-  position={{ x: -11, y:4, z: 10}}
+  position={{ x: -9, y:4, z: 10}}
   lookAt={{}}
   castShadow
+  far = {25}
 >
 <THR.OrbitControls 
     enableDamping 
