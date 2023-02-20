@@ -17,7 +17,7 @@
 	$: offsetY.set($pointer.y * 5)
     
   
-  const colorSpotLight = new Three.Color( "rgb(138, 187, 255)" )
+  const colorSpotLight = new Three.Color( "rgb(50, 119, 168)" )
 
   const colorLight = new Three.Color( "rgb(204, 240, 255)" )
   
@@ -28,22 +28,24 @@
 </script>
 
 <THR.DirectionalLight 
+  dispose = {true}
   color = {colorLight} 
   intensity={2}
-  position={{ x: -2, y: 3, z: 6 }} 
-  target={{ x: 1 }}
+  position={{ x: -3, y: 4, z: 5 }} 
+  target={{ x: 2 }}
   shadow = {{
-    mapSize: [512, 512],
-    camera: {left: 12, right: -12, top: 10, bottom: -5, near: 0.5, far: 25}
-  }}
+    mapSize: [1024, 1024],
+    camera: {left: -15, right: 25, top: 15, bottom: -5, near: 0.1, far: 30},
+    radius: 1.5,
+    bias: 0.0001
+  }} 
   
 />
 
-
-
 <THR.SpotLight 
+  dispose = {true}
   color = {colorSpotLight} 
-  position={{ x: -2, y: 5, z:2 }} 
+  position={{ x: -2, y: 4, z:2 }} 
   target={{x:$offsetX}}
   angle = {45}
   distance = {15}
@@ -58,6 +60,7 @@
 />
 
 <THR.SpotLight 
+  dispose = {true}
   color = {colorSpotLight} 
   position={{ x: 4, y: 5, z:2 }} 
   target={{x:$offsetX, z:$offsetY}}
@@ -69,15 +72,13 @@
     mapSize: [256, 256],
     radius: 5
   }}
- 
-/>
+ />
 
 
 <THR.PerspectiveCamera 
   fov={25} 
-  position={{ x: -9, y:4, z: 10}}
+  position={{ x: -7, y:4, z: 10}}
   lookAt={{}}
-  castShadow
   far = {25}
 >
 <THR.OrbitControls 
@@ -102,6 +103,3 @@
 <Studia />
 
 <Tv />
-
-
-

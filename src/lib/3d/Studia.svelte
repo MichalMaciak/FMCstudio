@@ -18,7 +18,7 @@
 
     let nullImage = "/img/1.jpg" 
     let studioImage1 = "/img/tlo.jpg"
-    let studioImage2 = "/img/tlo.jpg"
+    let studioImage2 = "/img/1.jpg"
     let studioImage3 = "/img/tlo.jpg"
 
     
@@ -42,14 +42,8 @@
 
     const onStudio1leave = (e: CustomEvent<THR.ThreltePointerEvent>) => {
     if (studioColor1 != fontColor) {
-      studioColor1 = fontColor   
-      studioImgTexture = new Three.TextureLoader().load( nullImage ); 
-      studioImg = new Three.MeshStandardMaterial({
-      map: studioImgTexture,      
-      })
-      studioImg.needsUpdate = true;
-      };
-    }
+      studioColor1 = fontColor  
+    }}
 
     const onStudio2 = (e: CustomEvent<THR.ThreltePointerEvent>) => {
     if (studioColor2 != linkFonColor) {
@@ -64,12 +58,7 @@
     const onStudio2leave = (e: CustomEvent<THR.ThreltePointerEvent>) => {
     if (studioColor2 !=fontColor) {
       studioColor2 = fontColor   
-      studioImgTexture = new Three.TextureLoader().load( nullImage ); 
-      studioImg = new Three.MeshStandardMaterial({
-      map: studioImgTexture,      
-      })
-      studioImg.needsUpdate = true;
-    }}
+      }}
 
     const onStudio3 = (e: CustomEvent<THR.ThreltePointerEvent>) => {
     if (studioColor3 != linkFonColor) {
@@ -84,17 +73,17 @@
     const onStudio3leave = (e: CustomEvent<THR.ThreltePointerEvent>) => {
     if (studioColor3 != fontColor) {
       studioColor3 = fontColor   
-      studioImgTexture = new Three.TextureLoader().load( nullImage ); 
-      studioImg = new Three.MeshStandardMaterial({
-      map: studioImgTexture,      
-      })
-      studioImg.needsUpdate = true;
-    }}
+      }}
+  
 
 </script>
 
 
+
+
+
 <THR.Mesh
+  dispose = {true}
   position = {{x:2.3, y:2.5, z: 0.3}}
   geometry = {new Three.PlaneGeometry(6,3.5)}
   material = {new Three.MeshStandardMaterial({
@@ -132,6 +121,7 @@
 </THR.Mesh>
 
 <THR.Mesh
+  dispose = {true}
   position = {{x:3.6, y:2.3, z: 0.4}}
   geometry = {new Three.PlaneGeometry(2.8, 1.8)}
   material = {studioImg}

@@ -12,7 +12,8 @@
     import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass'
     import { SAOPass } from 'three/examples/jsm/postprocessing/SAOPass'
     import { SMAAPass } from 'three/examples/jsm/postprocessing/SMAAPass'
-
+    
+   
 
 </script>
 
@@ -22,9 +23,9 @@
    	<THR.Canvas 
         dpr = {0.9}
         frameloop = {'always'}
-        shadows 
-        rendererParameters = {{antialias: true}}
-        shadowMapType = {Three.VSMShadowMap}>
+        shadowMapType = {Three.VSMShadowMap}
+        shadows
+        >
         <THR.Pass pass={new UnrealBloomPass(new Vector2(1024, 1024), 0.15, 0.15, 0.7)} /> 
         <THR.Pass pass={new SAOPass(new Three.Scene, new Three.Camera, false, false, new Vector2(256, 256))} /> 
         <THR.Pass pass={new SMAAPass(256, 256)} /> 

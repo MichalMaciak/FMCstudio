@@ -16,6 +16,12 @@
     })
   });
 
+  onDestroy(async () => {
+	const logoGeometry = derived(gltf, (gltf) => {
+    if (!gltf) return
+      return (gltf.nodes.STUDIO as Three.Mesh).geometry
+    })
+  });
   
   
 
@@ -25,7 +31,7 @@
 {#if $gltf}
 
   <THR.Object3DInstance 
-  dispose
+  dispose = {true}
   object = {$gltf.nodes['FMC']} 
   scale = {0.8}
   castShadow
@@ -34,19 +40,19 @@
   />
 
   <THR.Object3DInstance 
-  dispose
+  dispose = {true}
   object = {$gltf.nodes['TV']} 
   scale = {1}
   />
 
   <THR.Object3DInstance 
-  dispose
+  dispose = {true}
   object = {$gltf.nodes['TV2']} 
   scale = {1}
   />
 
   <THR.Object3DInstance 
-  dispose
+  dispose = {true}
   object = {$gltf.nodes['krata']} 
   scale = {1}
   receiveShadow
@@ -54,7 +60,7 @@
   />
 
   <THR.Object3DInstance 
-  dispose
+  dispose = {true}
   object = {$gltf.nodes['krata2']} 
   scale = {1}
   receiveShadow
@@ -62,7 +68,7 @@
   />
 
   <THR.Object3DInstance 
-  dispose
+  dispose = {true}
   object = {$gltf.nodes['krata3']} 
   scale = {1}
   receiveShadow
@@ -70,31 +76,44 @@
   />
 
   <THR.Object3DInstance 
-  dispose
+  dispose = {true}
   object = {$gltf.nodes['kabel01']} 
   scale = {1}
   receiveShadow
   castShadow
   />
   <THR.Object3DInstance 
-  dispose
+  dispose = {true}
   object = {$gltf.nodes['kabel02']} 
   scale = {1}
   receiveShadow
   castShadow
   />
   <THR.Object3DInstance 
-  dispose
+  dispose = {true}
   object = {$gltf.nodes['kabel03']} 
   scale = {1}
   receiveShadow
   castShadow
   />
   <THR.Object3DInstance 
-  dispose
+  dispose = {true}
   object = {$gltf.nodes['kabel04']} 
   scale = {1}
   receiveShadow
+  castShadow
+  />
+
+  <THR.Object3DInstance 
+  dispose = {true}
+  object = {$gltf.nodes['camera']} 
+  scale = {1}
+  castShadow
+  />
+  <THR.Object3DInstance 
+  dispose = {true}
+  object = {$gltf.nodes['camera1']} 
+  scale = {1}
   castShadow
   />
 

@@ -10,7 +10,7 @@
 
 
 <THR.Mesh
-  dispose
+  dispose = {true}
   position = {{x:1.7, y:2.5, z: 0.1}}
   geometry = {new Three.BoxGeometry(12.5,5,0.3)}
   material = {new Three.MeshStandardMaterial({
@@ -21,7 +21,7 @@
 />
 
 <THR.Mesh
-  dispose
+  dispose = {true}
   rotation = {{y: -Math.PI / 2}}
   position = {{x:8.05, y:2.5, z: 6.2}}
   geometry = {new Three.BoxGeometry(12.5,5,0.3)}
@@ -33,7 +33,7 @@
 />
 
 <THR.Mesh
-  dispose
+  dispose = {true}
   rotation = {{x: -Math.PI / 2, }}
   position = {{x:1.84, y:0.04, z: 6.2}}
   geometry = {new Three.BoxGeometry(12.8,12.5,0.3)}
