@@ -76,6 +76,18 @@
       }}
   
 
+const geometry = new Three.CircleGeometry( 3.1, 15, 2.15, 3.1 );
+const material = new Three.MeshStandardMaterial({ 
+  color: 0xDB0000, 
+  metalness: 0.1,
+  roughness: 0.4,
+}
+  
+  );
+const circle = new Three.Mesh( geometry, material );
+circle.position.set( 3.1, 0.2, 4 );
+circle.rotation.set(-Math.PI / 2, 0, Math.PI / 7)
+circle.receiveShadow
 </script>
 
 
@@ -125,6 +137,10 @@
   position = {{x:3.6, y:2.3, z: 0.4}}
   geometry = {new Three.PlaneGeometry(2.8, 1.8)}
   material = {studioImg}
-  receiveShadow
+  
   >
 </THR.Mesh>
+
+<THR.DisposableObject dispose object={circle}>
+  <THR.Three type={circle}/>
+</THR.DisposableObject>
