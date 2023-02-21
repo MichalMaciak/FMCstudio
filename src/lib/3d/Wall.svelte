@@ -1,10 +1,27 @@
 <script lang="ts">
-    import * as THR from '@threlte/core';
-    import * as Three from 'three';
+  import * as THR from '@threlte/core';
+  import * as Three from 'three';
 
-    const colorStudio = new Three.Color( 0x07214f )
+  const colorStudio = new Three.Color( 0x07214f )
 
-    
+  let carpert = "/texture/fmc.png" 
+  
+  let carpertTexture = new Three.TextureLoader().load( carpert );  
+
+  const geometry = new Three.PlaneGeometry(6.5, 3.5)
+  const material = new Three.MeshStandardMaterial({ 
+    map:carpertTexture,
+    transparent: true,
+    metalness: 0.1,
+    roughness: 0.4,
+  });
+
+  const carpetFloor = new Three.Mesh( geometry, material );
+  carpetFloor.scale.set(0.9, 0.9, 0.9)
+  carpetFloor.position.set( 2, 0.2, 5.5 );
+  carpetFloor.rotation.set(-Math.PI / 2, 0, -Math.PI / 5.5)
+  carpetFloor.receiveShadow
+  
 </script>
 
 
@@ -43,3 +60,7 @@
   receiveShadow
   castShadow
 />
+
+<THR.DisposableObject dispose={true}>
+  <THR.Three type={carpetFloor}/>
+</THR.DisposableObject>
