@@ -9,8 +9,9 @@
     let stduio2 = 'Studio 2 - 25m2'
     let stduio3 = 'Studio 3 - 50m2'
 
-    let fontColor =  new Three.Color( 0x202020)
+    let fontColor =  new Three.Color( 0x0E0E0E)
     let linkFonColor = new Three.Color( 0x0E1C71)
+    let bord = new Three.Color( 0x464646)
 
     let studioColor1 = fontColor
     let studioColor2 = fontColor
@@ -26,7 +27,8 @@
     let studioImgTexture = new Three.TextureLoader().load( nullImage );  
     
     let  studioImg = new Three.MeshStandardMaterial({
-      map: studioImgTexture,      
+      map: studioImgTexture,  
+      roughness: 0    
     })
 
     const onStudio1 = (e: CustomEvent<THR.ThreltePointerEvent>) => {
@@ -34,7 +36,8 @@
       studioColor1 = linkFonColor;
       studioImgTexture = new Three.TextureLoader().load( studioImage1 ); 
       studioImg = new Three.MeshStandardMaterial({
-      map: studioImgTexture,      
+      map: studioImgTexture, 
+           
       })
       studioImg.needsUpdate = true;
       };
@@ -88,7 +91,8 @@
   position = {{x:2.3, y:2.5, z: 0.3}}
   geometry = {new Three.PlaneGeometry(6,3.5)}
   material = {new Three.MeshStandardMaterial({
-    color: "grey"
+    color: bord,
+    roughness: 0  
   })}
   receiveShadow 
 >   

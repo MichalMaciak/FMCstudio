@@ -26,7 +26,7 @@
         shadowMapType = {Three.VSMShadowMap}
         shadows
         >
-        <THR.Pass pass={new UnrealBloomPass(new Vector2(1024, 1024), 0.15, 0.15, 0.7)} /> 
+        <THR.Pass pass={new UnrealBloomPass(new Vector2(2048, 2048), 0.90, 0.35, 1)} /> 
         <THR.Pass pass={new SAOPass(new Three.Scene, new Three.Camera, false, false, new Vector2(256, 256))} /> 
         <THR.Pass pass={new SMAAPass(256, 256)} /> 
         <Theatre/> 

@@ -12,20 +12,43 @@
   const { pointer } = THR.useThrelte()
   
   const offsetX = spring($pointer.x * 10)
-	$: offsetX.set($pointer.x * 5)
+	$: offsetX.set($pointer.x * 10)
 	const offsetY = spring($pointer.y * 10)
-	$: offsetY.set($pointer.y * 5)
+	$: offsetY.set($pointer.y * 10)
     
   
   const colorSpotLight = new Three.Color( "rgb(50, 119, 168)" )
 
   const colorLight = new Three.Color( "rgb(204, 240, 255)" )
   
+  const redLight = new Three.Color( "rgb(222, 9, 9)" )
  
-
 
     
 </script>
+
+
+
+<THR.PointLight 
+  dispose = {true}
+  position={{ x: -3, y: 3, z: 3}} 
+  color = {redLight}
+  intensity = {4}
+  decay = {1}
+  power ={100}
+  shadow
+  distance = {5}
+  />
+
+<THR.PointLight 
+  dispose = {true}
+  position={{ x: 6, y: 3, z: 4}} 
+  color = {redLight}
+  intensity = {5}
+  power ={200}
+  shadow
+  distance = {7}
+/>
 
 <THR.DirectionalLight 
   dispose = {true}
@@ -45,12 +68,12 @@
 <THR.SpotLight 
   dispose = {true}
   color = {colorSpotLight} 
-  position={{ x: -2, y: 4, z:2 }} 
+  position={{ x: -2, y: 5, z:1 }} 
   target={{x:$offsetX}}
   angle = {45}
   distance = {15}
-  intensity = {3}
-  penumbra = {1}
+  intensity = {5}
+  penumbra = {0.6}
   shadow = {{
     mapSize: [256, 256],
     radius: 5
@@ -62,18 +85,19 @@
 <THR.SpotLight 
   dispose = {true}
   color = {colorSpotLight} 
-  position={{ x: 4, y: 5, z:2 }} 
+  position={{ x: 3, y: 5, z:1 }} 
   target={{x:$offsetX, z:$offsetY}}
-  angle = {45}
+  angle = {55}
   distance = {15}
-  intensity = {3}
-  penumbra = {1}
+  intensity = {5}
+  penumbra = {0.6}
   shadow = {{
     mapSize: [256, 256],
     radius: 5
   }}
  />
 
+ 
 
 <THR.PerspectiveCamera 
   fov={25} 
@@ -95,6 +119,8 @@
     
   />
 </THR.PerspectiveCamera>
+
+
 
 <Wall />
 
