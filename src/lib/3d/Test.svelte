@@ -8,7 +8,7 @@
 
 
 
-    const { gltf } = useGltf('/3d/test.gltf', {
+    const { gltf } = useGltf('/3d/male_test.gltf', {
     useDraco: true
     })
 
@@ -64,7 +64,7 @@ far = {150}
 
 <THR.Object3DInstance 
 dispose = {true}
-object = {$gltf.nodes['Textured_mesh_2']} 
+object = {$gltf.nodes['test']} 
 scale = {0.8}
 castShadow
 receiveShadow

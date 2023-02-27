@@ -1,25 +1,35 @@
-<svelte:head>
-	<link rel="stylesheet" href='src/lib/style.css'>
-</svelte:head>
-
-
 <script>
 	import Theatre from '$lib/3d/Theatre.svelte';
     import OpenTag from '$lib/OpenTag.svelte';
+    import GalleryImage from '$lib/GalleryImage.svelte';
+    import SvelteSeo from "svelte-seo";
+    
     import * as THR from '@threlte/core';
     import * as Three from 'three'
     import { Vector2 } from 'three';
     import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass'
     import { SAOPass } from 'three/examples/jsm/postprocessing/SAOPass'
     import { SMAAPass } from 'three/examples/jsm/postprocessing/SMAAPass'
-   
-   
+
+    let img1 = "/img/studio_m1.jpg"
+    let img2 = "/img/studio_m2.jpg"
+
+    let x = false
+    let y = true
+    
+    
 
 </script>
 
+<SvelteSeo
+  title="FMC Studio"
+  description="Wyprodukujemy dla Ciebie program"
+/>
 
 
-<section class="canvas-wrapper-theatre">
+
+
+<div class="relative h-screen w-screen bg-neutral-800">
    	<THR.Canvas 
         dpr = {0.9}
         frameloop = {'always'}
@@ -32,39 +42,23 @@
         <Theatre/> 
        
     </THR.Canvas>     
-</section>
+</div>
 
-<!-- <section class="wrapper-OpenTag">
-    <OpenTag /> 
-</section> -->
+<div class="bg-neutral-800">
+    <GalleryImage />
+</div>
 
-<section class="wrapper-secend">
-    <OpenTag /> 
-</section>
+<div class = "grid grid-cols-2 gap-0 bg-neutral-800 w-screen">
+    <section class="w-full pl-16 pr-16">
+        <OpenTag /> 
+    </section> 
 
-<style>
-    .canvas-wrapper-theatre {
-        position: relative;
-		height: 100vh;
-        width: 100vw;
-    }
+    {#if x}
+        <img class="w-full h-screen object-cover pt-16" src={img1} alt="Studio średnie"/>
+    {/if}
 
- /*    .wrapper-OpenTag {
-        position: absolute;
-        width: 25%;
-        bottom: 0;
-        right: 0;
-        z-index: 9999;
-        background-color: rgb(32, 32, 32);
-        padding: 10rem;
-    } */
-    
-    .wrapper-secend {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgb(32, 32, 32)
-    }
+    {#if y}
+        <img class="w-full h-screen object-cover pt-16" src={img2} alt="Studio średnie"/>
+    {/if}
+</div>
 
-   
-</style>

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+    margin: 0;
+    overflow-x: hidden; 
+    font-family: 'Roboto', sans-serif ;
+}
+
+section {
+    padding: 2rem;
+}
+
+h1, h3, h4, p, ul{
+    color:  rgb(241, 241, 241);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h3 {
+   font-size: 2rem;
+   padding-bottom: 0.5rem;
+}
+
+h4 {
+   font-size: 2rem;
+   padding-bottom: 0.5rem;
+   text-align: center;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    list-style: none
+}
+
+li::before {
+    content: "•"; 
+    color: red;
+    width: 1rem;
+    margin-left: 1rem;
+    padding-right: 1.2rem;
+
+}
+
+li {
+    font-size: 1.5rem;
+    line-height: 3rem;
+
+}

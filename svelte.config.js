@@ -1,19 +1,15 @@
-//import adapter from '@sveltejs/adapter-auto';
-//import { vitePreprocess } from '@sveltejs/kit/vite';
+import adapter from '@sveltejs/adapter-auto';
 import sequence from 'svelte-sequential-preprocessor'
-import preprocess from 'svelte-preprocess'
-import seqPreprocessor from 'svelte-sequential-preprocessor'
 import { preprocessThrelte } from '@threlte/preprocess'
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
-	// for more information about preprocessors
-	//preprocess: vitePreprocess(),			
-	preprocess: sequence([preprocess(), preprocessThrelte()]),
-	//kit: {
-	//	adapter: adapter()
-	//}
+	kit: {
+		adapter: adapter()
+	},
+	preprocess:[vitePreprocess({preserve: ['ld+json']}), preprocessThrelte()]
+	
 };
 
 export default config;
