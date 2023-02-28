@@ -6,6 +6,7 @@
   import Wall from './Wall.svelte';
 	import Tv from './Tv.svelte';
 	import Studia from './Studia.svelte';
+	import Camera from './Camera.svelte';
 
   
 
@@ -98,29 +99,7 @@
  />
 
  
-
-<THR.PerspectiveCamera 
-  fov={25} 
-  position={{ x: -7, y:4, z: 10}}
-  lookAt={{}}
-  far = {25}
->
-<THR.OrbitControls 
-    enableDamping 
-    target = {{y:2, z:5}}
-    enablePan = {false}
-    enableZoom = {false}
-   
-    maxAzimuthAngle = {-0.5}
-    maxPolarAngle = {1.4}
-    minAzimuthAngle = {-1.4}
-    minPolarAngle = {1}
-  
-    
-  />
-</THR.PerspectiveCamera>
-
-
+<Camera />
 
 <Wall />
 

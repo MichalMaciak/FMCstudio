@@ -17,10 +17,10 @@
     let studioColor2 = fontColor
     let studioColor3 = fontColor
 
-    let nullImage = "/img/1.jpg" 
-    let studioImage1 = "/img/tlo.jpg"
-    let studioImage2 = "/img/1.jpg"
-    let studioImage3 = "/img/tlo.jpg"
+    let nullImage = "/img/studio_m1.jpg" 
+    let studioImage1 = "/img/studio_m2.jpg"
+    let studioImage2 = "/img/studio_s1.jpg"
+    let studioImage3 = "/img/studio_s2.jpg"
 
     
     
@@ -97,27 +97,27 @@
   receiveShadow 
 >   
   <Text text={rent} 
-  position = {{x:-3, y:1.5, z: 0.3}}
+  position = {{x:-2.8, y:1.5, z: 0.2}}
   fontSize = {0.5}
   color = {fontColor}
   />
 
   <Text text={stduio1} 
-      position = {{x:-3, y:0.6, z: 0.3}}
+      position = {{x:-2.8, y:0.6, z: 0.2}}
       fontSize = {0.3}
       color = {studioColor1}
       interactive on:pointerenter={onStudio1} on:pointerleave={onStudio1leave}
   />
 
   <Text text={stduio2} 
-      position = {{x:-3, y:0, z: 0.3}}
+      position = {{x:-2.8, y:0, z: 0.2}}
       fontSize = {0.3}
       color = {studioColor2}
       interactive on:pointerenter={onStudio2} on:pointerleave={onStudio2leave}
   />
 
   <Text text={stduio3} 
-      position = {{x:-3, y:-0.6, z: 0.3}}
+      position = {{x:-2.8, y:-0.6, z: 0.2}}
       fontSize = {0.3}
       color = {studioColor3}
       interactive on:pointerenter={onStudio3} on:pointerleave={onStudio3leave}
