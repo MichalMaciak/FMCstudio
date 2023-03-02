@@ -12,6 +12,7 @@
     const maxPolarAngleCam = writable(1.4)
     const minAzimuthAngleCam = writable(-1.4)
     const minPolarAngleCam = writable(1)
+    const targetCamX = writable(0)
     const targetCamY = writable(2)
     const targetCamZ = writable(5)
     const enableZoomCam = writable(false) 
@@ -22,13 +23,14 @@
         const mediaQueryMobile = window.matchMedia('(max-width: 768px)');
 
         updateCAM = () => {
-        xCam.set(mediaQueryMobile.matches ? 8: -7);
-        yCam.set(mediaQueryMobile.matches ? 4 : 3);
-        zCam.set(mediaQueryMobile.matches ? 5 : 10);
+        xCam.set(mediaQueryMobile.matches ? 20: -7);
+        yCam.set(mediaQueryMobile.matches ? 2 : 3);
+        zCam.set(mediaQueryMobile.matches ? 8: 10);
         farCam.set(mediaQueryMobile.matches ? 35 : 25);
+        targetCamX.set(mediaQueryMobile.matches ? 2 : 0);
         targetCamY.set(mediaQueryMobile.matches ? 2 : 2);
-        targetCamZ.set(mediaQueryMobile.matches ? 4 : 5);
-        maxAzimuthAngleCam.set(mediaQueryMobile.matches ? 0 : -0.5);
+        targetCamZ.set(mediaQueryMobile.matches ? 5 : 5);
+        maxAzimuthAngleCam.set(mediaQueryMobile.matches ? 0.2 : -0.5);
         minAzimuthAngleCam.set(mediaQueryMobile.matches ? -2 : -1.4);
         enableZoomCam.set(mediaQueryMobile.matches ? true : false);
         }
@@ -55,7 +57,7 @@
 >
 <THR.OrbitControls 
     enableDamping 
-    target = {{y:$targetCamY, z:$targetCamZ}}
+    target = {{x:$targetCamX, y:$targetCamY, z:$targetCamZ}}
     enablePan = {false}
     enableZoom = {false}
    

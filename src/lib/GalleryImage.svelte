@@ -1,13 +1,23 @@
 <script lang=ts>
-    export let images = [
-        {url: "/img/studio_s1.jpg"},
-        {url: "/img/studio_s2.jpg"},
-        {url: "/img/studio_m1.jpg"},
-        {url: "/img/studio_m2.jpg"},
-        {url: "/img/studio_s1.jpg"},
-        {url: "/img/studio_m2.jpg"}
-    ]
 
+    import { onMount } from 'svelte';
+    import Img from '@zerodevx/svelte-img'
+    import studioS1 from '$lib/img/studio_s1.jpg?run'
+    import studioS2 from '$lib/img/studio_s2.jpg?run'
+    import studioM1 from '$lib/img/studio_m1.jpg?run'
+    import studioM2 from '$lib/img/studio_m1.jpg?run'
+    import studioD1 from '$lib/img/studio_s1.jpg?run'
+    import studioD2 from '$lib/img/studio_m1.jpg?run'
+
+    let images = [
+        {url: studioS1},
+        {url: studioS2},
+        {url: studioM1},
+        {url: studioM2},
+        {url: studioD1},
+        {url: studioD2}
+    ]
+    
     let isDragging = false;
     let startX:Number;
     let scrollLeft:Number;
@@ -55,7 +65,7 @@
 
 
 
-<div class="flex flex-nowrap w-full shrink-0 snap-mandatory touch-pan-x pt-8 overflow-hidden"
+<div class="flex flex-nowrap touch-pan-x pt-8 overflow-auto"
     on:mousedown={handleMouseDown}
     on:mousemove={handleMouseMove}
     on:mouseup={handleMouseUp}
@@ -64,17 +74,7 @@
 >
 
     {#each images as { url }, i}
-        <img class="snap-always snap-center w-2/3 h-auto object-cover min-w-650 shrink-0" src={url} alt="Studio średnie-{i + 1}"/>
+        <Img class="w-screen h-full object-cover shrink-0" src={url} alt="Studio średnie-{i + 1}"/>
     {/each}   
 
 </div>
-
-<style>
-    .cursor-grabbing {
-        cursor: grabbing;
-    }
-
-    .cursor-grab {
-        cursor: grab;
-    }
-</style>

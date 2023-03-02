@@ -1,6 +1,6 @@
 <div class="px-4 md:px-16 pt-8">
 <section>
-    <h3 id="2">Z mediami jesteśmy związani od zawsze. </h3>
+    <h3>Z mediami jesteśmy związani od zawsze. </h3>
     <p> Nasze  różnorodne doświadczenie w tej branży pozwoli nam wesprzeć Cię w całym procesie produkcyjnym - od opracowania scenariusza, przez produkcję, po postprodukcję. Ty masz pomysł, a my go realizujemy.</p>
 </section>
 

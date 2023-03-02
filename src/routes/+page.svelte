@@ -15,7 +15,10 @@
 	import Cennik from '$lib/Cennik.svelte';
 	import TvObject from '$lib/3d/TV/TvObject.svelte';
     
-
+    function scrollToDiv() {
+    const section = document.getElementById('text');
+    section.scrollIntoView({ behavior: 'smooth' });
+    }
 </script>
 
 <SvelteSeo
@@ -24,6 +27,8 @@
 />
 
 <main class="bg-neutral-800">
+
+    <button on:click={scrollToDiv} class="absolute z-50 top-0 text-slate-100 bg-slate-700 p-4">Przewiń na dół</button>
 
     <div class="h-screen w-full ">
         <THR.Canvas 
@@ -37,39 +42,44 @@
          <THR.Pass pass={new SMAAPass(256, 256)} /> 
          <Theatre/> 
         
-     </THR.Canvas>     
- </div>
+     </THR.Canvas>  
+
+    </div>
  
- <section class="px-4 md:px-48 py-56 w-full">
-     <h1 class="text-6xl text-sky-300 text-center uppercase font-bold leading-relaxed"> Wyprodukujemy <br> dla Ciebie program</h1>
+ <section id="text" class="px-4 md:px-48 py-12 md:py-56 w-full">
+     <h1 class="text-3xl md:text-6xl text-sky-300 text-center uppercase font-bold leading-relaxed"> Wyprodukujemy <br> dla Ciebie program</h1>
  </section>
  
- <div class="w-full  -z-10">
+ <div class="w-full">
      
      <GalleryImage />
  
  </div>
 
- <TvObject />
- 
- <section class="px-4 md:px-48 py-28 w-full mt-80 z-50">
+ <section class="px-4 md:px-48 py-14 w-full ">
      <p class="text-5xl text-sky-300 font-bold leading-normal"> Dzięki naszym usługom realizacja profesjonalnych materiałów w studio tv jest łatwa i przyjemna.</p> 
      <p class="text-3xl pt-6"> Potrzebujesz materiałów do celów marketingowych, reklamowych lub publicystycznych? Doskonale trafiłeś. Dysponujemy trzema nowocześnie wyposażonymi studiami telewizyjnymi, co pozwoli Ci na realizację każdego pomysłu. Z naszą pomocą możesz transmitować swoje produkcje na żywo we wskazanych kanałach online lub tworzyć materiały wideo do publikacji w dowolnych mediach.</p>
  </section>
+
+
  
- <div>
- 
- </div>
- 
+
  <div class="relative grid grid-cols-1 md:grid-cols-2 gap-0 w-full">
      
      <NaszeStudio /> 
  
      <RightImage />
- 
-     <Onas />
-  
+   
  </div>
+
+ <div class="pt-8 pb-12">
+    <Onas />
+ </div>
+
+ <div>
+    <TvObject />
+ </div>
+
 
  <div class="pt-8">
     <Projekty />

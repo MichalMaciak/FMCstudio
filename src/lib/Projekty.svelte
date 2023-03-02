@@ -7,7 +7,7 @@
 </section>
 
 <section>
-    <h4>Zaproś gości do wybranego przez siebie studia lub połącz się z prelegentami i rozmówcami zdalnie. My zadbamy o Wasz komfort, a jeśli zgłosisz taką potrzebę, zapewnimy moderatora, profesjonalne wsparcie merytoryczne i obsługę techniczną projektu.</h4>
+    <p>Zaproś gości do wybranego przez siebie studia lub połącz się z prelegentami i rozmówcami zdalnie. My zadbamy o Wasz komfort, a jeśli zgłosisz taką potrzebę, zapewnimy moderatora, profesjonalne wsparcie merytoryczne i obsługę techniczną projektu.</p>
 </section>
 
 </div>

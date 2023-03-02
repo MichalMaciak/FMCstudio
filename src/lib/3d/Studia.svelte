@@ -5,9 +5,9 @@
     import * as Three from 'three';
    
     let rent = 'Wynajmij studio'
-    let stduio1 = 'Studio 1 - 4m2'
-    let stduio2 = 'Studio 2 - 25m2'
-    let stduio3 = 'Studio 3 - 50m2'
+    let stduio1 = 'Studio 1'
+    let stduio2 = 'Studio 2'
+    let stduio3 = 'Studio 3'
 
     let fontColor =  new Three.Color( 0x0E0E0E)
     let linkFonColor = new Three.Color( 0x0E1C71)
