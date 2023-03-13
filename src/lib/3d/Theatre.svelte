@@ -20,7 +20,7 @@
   
   const colorSpotLight = new Three.Color( "rgb(50, 119, 168)" )
 
-  const colorLight = new Three.Color( "rgb(204, 240, 255)" )
+  const colorLight = new Three.Color( "rgb(255, 255, 240)" )
   
   const redLight = new Three.Color( "rgb(222, 9, 9)" )
  
@@ -54,9 +54,9 @@
 <THR.DirectionalLight 
   dispose = {true}
   color = {colorLight} 
-  intensity={2}
-  position={{ x: -3, y: 4, z: 5 }} 
-  target={{ x: 2 }}
+  intensity={5}
+  position={{ x: -4, y: 5, z: 6 }} 
+  target={{ x: 3 }}
   shadow = {{
     mapSize: [1024, 1024],
     camera: {left: -15, right: 25, top: 15, bottom: -5, near: 0.1, far: 30},

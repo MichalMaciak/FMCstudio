@@ -24,11 +24,11 @@
 
         updateCAM = () => {
         xCam.set(mediaQueryMobile.matches ? 20: -7);
-        yCam.set(mediaQueryMobile.matches ? 2 : 3);
+        yCam.set(mediaQueryMobile.matches ? 2 : 4);
         zCam.set(mediaQueryMobile.matches ? 8: 10);
         farCam.set(mediaQueryMobile.matches ? 35 : 25);
         targetCamX.set(mediaQueryMobile.matches ? 2 : 0);
-        targetCamY.set(mediaQueryMobile.matches ? 2 : 2);
+        targetCamY.set(mediaQueryMobile.matches ? 2 : 2.8);
         targetCamZ.set(mediaQueryMobile.matches ? 5 : 5);
         maxAzimuthAngleCam.set(mediaQueryMobile.matches ? 0.2 : -0.5);
         minAzimuthAngleCam.set(mediaQueryMobile.matches ? -2 : -1.4);

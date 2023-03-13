@@ -39,19 +39,7 @@
   position = {{x:2, y:0.2, z:3}}
   />
 
-  <THR.Object3DInstance 
-  dispose = {true}
-  object = {$gltf.nodes['TV']} 
-  scale = {1}
-  />
-
-  <THR.Object3DInstance 
-  dispose = {true}
-  object = {$gltf.nodes['TV2']} 
-  scale = {1}
-  />
-
-  <THR.Object3DInstance 
+    <THR.Object3DInstance 
   dispose = {true}
   object = {$gltf.nodes['krata']} 
   scale = {1}
@@ -107,23 +95,19 @@
   <THR.Object3DInstance 
   dispose = {true}
   object = {$gltf.nodes['camera']} 
-  scale = {1}
+  scale = {1.5}
   castShadow
+  position = {{x:-1, y:0, z:-3}}
+
   />
   <THR.Object3DInstance 
   dispose = {true}
   object = {$gltf.nodes['camera1']} 
-  scale = {1}
+  scale = {1.5}
   castShadow
+  position = {{x:4, y:3, z:9}}
   />
 
-  <THR.Object3DInstance 
-  dispose = {true}
-  object = {$gltf.nodes['camera01_screen']} 
-  scale = {1}
-  receiveShadow
-  
-  />
-  
+ 
   
 {/if}

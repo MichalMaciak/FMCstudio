@@ -38,7 +38,7 @@
             
         <h2 id="3" class="text-3xl text-slate-100 pt-12">Studio III - Duże w budowie</h2> 
 
-        <ul class="pb-8 h-screen">
+        <ul class="pb-8">
             <li>6x Blackmagic Studio Camera 4K Plus</li>
             <li>Tekst</li>
             <li>Tekst</li>

@@ -2,7 +2,7 @@
   import * as THR from '@threlte/core';
   import * as Three from 'three';
 
-  const colorStudio = new Three.Color( 0x07214f )
+  const colorStudio = new Three.Color( 0x0A0A0A )
 
   let carpert = "/texture/fmc.png" 
   
@@ -12,8 +12,8 @@
   const material = new Three.MeshStandardMaterial({ 
     map:carpertTexture,
     transparent: true,
-    metalness: 0.1,
-    roughness: 0.4,
+    metalness: 0.7,
+    roughness: 0.5,
   });
 
   const carpetFloor = new Three.Mesh( geometry, material );
