@@ -8,7 +8,10 @@
 
 </script>
 
-<Img class="sticky top-0" src={studioM1} alt="FMC Studio zdjecie" />
-<Img class="sticky top-0" src={studioM2} alt="FMC Studio zdjecie" />
-<Img class="sticky top-0" src={studioS1} alt="FMC Studio zdjecie" />
-<Img class="sticky top-0" src={studioS2} alt="FMC Studio zdjecie" />
+<div class="reletive w-full">
+
+</div>
+<Img class="sticky top-0 w-full object-cover" src={studioM1} alt="FMC Studio zdjecie" />
+<Img class="sticky top-0 w-full object-cover" src={studioM2} alt="FMC Studio zdjecie" />
+<Img class="sticky top-0 w-full object-cover" src={studioS1} alt="FMC Studio zdjecie" />
+<Img class="sticky top-0 w-full object-cover" src={studioS2} alt="FMC Studio zdjecie" />
