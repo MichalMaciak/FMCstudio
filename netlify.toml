@@ -1,4 +1,3 @@
 [build]
   command = "npm run build"
-  command = "cd package"
-  publish = "npm publish"
+  publish = "build"
