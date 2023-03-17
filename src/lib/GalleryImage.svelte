@@ -21,9 +21,9 @@
     let isDragging = false;
     let startX:Number;
     let scrollLeft:Number;
-    let container;
+    let container:any;
 
-    function handleMouseDown(event) {
+    function handleMouseDown(event:any) {
         if (!container) return;
         isDragging = true;
         startX = event.pageX - container.offsetLeft;

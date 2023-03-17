@@ -2,13 +2,13 @@ import adapter from '@sveltejs/adapter-netlify';
 import { preprocessThrelte } from '@threlte/preprocess'
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
-
-export default  {
-  preprocess:[vitePreprocess({preserve: ['ld+json']}), preprocessThrelte()],
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
 	kit: {
-		adapter: adapter({
-      edge: false,
-      split: false
-    })
-	}
-}
+		adapter: adapter()
+	},
+	preprocess:[vitePreprocess({preserve: ['ld+json']}), preprocessThrelte()]
+	
+};
+
+export default config;

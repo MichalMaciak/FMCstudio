@@ -1,7 +1,6 @@
-<script>
+<script lang="ts">
     import * as THR from '@threlte/core';
     import { onMount, onDestroy } from 'svelte';
-    import { tick } from 'svelte/internal';
     import { writable } from 'svelte/store';
 
     const xCam = writable(-7);
@@ -17,7 +16,7 @@
     const targetCamZ = writable(5)
     const enableZoomCam = writable(false) 
 
-    let updateCAM
+    let updateCAM: any
     
     onMount(() => {
         const mediaQueryMobile = window.matchMedia('(max-width: 768px)');
