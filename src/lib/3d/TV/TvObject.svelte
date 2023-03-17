@@ -141,7 +141,7 @@
             penumbra = {0.6}
             />
 
-               <Float>
+               
                 <HTML
                     dispose={true}
                     position = {{x:0, y:0, z:$VideoCenterhtmlPosZ}}
@@ -218,7 +218,7 @@
                         <iframe width="560" height="315" src={VideoRight} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </HTML>
-            </Float>
+            
             <THR.Mesh
                 dispose = {true}
                 position = {{x:0, y:0, z: -5}}

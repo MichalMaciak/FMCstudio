@@ -9,8 +9,10 @@
 
 </script>
 
-<Img class="sticky top-0 w-full object-cover" src={studioM1} alt="FMC Studio małe zdjecie" />
-<Img class="sticky top-0 w-full object-cover" src={studioM2} alt="FMC Studio małe zdjecie" />
-<Img class="sticky top-0 w-full object-cover" src={studioS1} alt="FMC Studio średnie zdjecie" />
-<Img class="sticky top-0 w-full object-cover" src={studioS2} alt="FMC Studio średnie zdjecie" />
-<Img class="sticky top-0 w-full object-cover" src={car} alt="FMC Studio samochód zdjecie" />
+
+  <Img class="sticky top-0 w-full object-cover" src={studioM1} alt="FMC Studio małe zdjecie" />
+  <Img class="sticky top-0 w-full object-cover" src={studioM2} alt="FMC Studio małe zdjecie" />
+  <Img class="sticky top-0 w-full object-cover" src={studioS1} alt="FMC Studio małe zdjecie" />
+  <Img class="sticky top-0 w-full object-cover" src={studioS2} alt="FMC Studio małe zdjecie" />
+  <Img class="sticky top-0 w-full object-cover" src={car} alt="FMC Studio małe zdjecie" />
+
