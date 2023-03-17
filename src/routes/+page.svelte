@@ -1,13 +1,13 @@
 <script>
 	import Theatre from '$lib/3d/Theatre.svelte';
-    import SvelteSeo from "svelte-seo";
-    import RightImage from '$lib/RightImage.svelte';
-    import * as THR from '@threlte/core';
-    import * as Three from 'three'
-    import { Vector2 } from 'three';
-    import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass'
-    import { SAOPass } from 'three/examples/jsm/postprocessing/SAOPass'
-    import { SMAAPass } from 'three/examples/jsm/postprocessing/SMAAPass'
+  import SvelteSeo from "svelte-seo";
+  import RightImage from '$lib/RightImage.svelte';
+  import * as THR from '@threlte/core';
+  import * as Three from 'three'
+  import { Vector2 } from 'three';
+  import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass'
+  import { SAOPass } from 'three/examples/jsm/postprocessing/SAOPass'
+  import { SMAAPass } from 'three/examples/jsm/postprocessing/SMAAPass'
 	import NaszeStudio from '$lib/NaszeStudio.svelte';
 	import Onas from '$lib/Onas.svelte';
 	import Projekty from '$lib/Projekty.svelte';

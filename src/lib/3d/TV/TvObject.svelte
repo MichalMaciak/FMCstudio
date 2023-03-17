@@ -6,7 +6,7 @@
     import * as Three from 'three';
 
     const oldWidth = 1990;
-    const oldHeight = 600;
+    const oldHeight = 1000;
 
     let screenWidth = 0;
 

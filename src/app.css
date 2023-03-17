@@ -46,16 +46,10 @@ p {
 ul {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    list-style: none
-}
-
-li::before {
-    content: "•"; 
-    color: red;
-    width: 1rem;
-    margin-left: 1rem;
-    padding-right: 1.2rem;
-
+    list-style: none;
+    list-style-position: outside;
+    list-style-type: disc;
+    margin-left: 2rem;
 }
 
 li {
