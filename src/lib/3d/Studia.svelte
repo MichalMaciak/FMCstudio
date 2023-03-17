@@ -7,12 +7,11 @@
     let rent = 'Wynajmij studio'
 
 
-    let fontColor =  new Three.Color( 0x0A0A0A)
-    let linkFonColor = new Three.Color( 0x0E1C71)
+    let fontColor =  new Three.Color( 0xffffff)
     let bord = new Three.Color( 0x0A0A0A)
+    let textback = new Three.Color( 0x0A0A0A)
 
-    let studioColor1 = fontColor
-    let nullImage = "/img/studio_m1.jpg" 
+    let nullImage = "/texture/ekran.jpg" 
      
     let studioImgTexture = new Three.TextureLoader().load( nullImage );  
     
@@ -36,14 +35,30 @@
     roughness: 0  
   })}
   receiveShadow 
->   
+  >   
   <Text text={rent} 
-  position = {{x:-2.8, y:1.5, z: 0.2}}
-  fontSize = {0.5}
+  position = {{x:-2.8, y:1, z: 0.3}}
+  fontSize = {0.7}
   color = {fontColor}
   />
 
 </THR.Mesh>
+
+<THR.Mesh
+  dispose = {true}
+  position = {{x:2.3, y:3, z: 0.4}}
+  geometry = {new Three.PlaneGeometry(6,0.8)}
+  material = {new Three.MeshStandardMaterial({
+    color: textback,
+    opacity: 0.5,
+    transparent: true,
+    roughness: 0,
+    
+  })}
+  receiveShadow 
+  >   
+</THR.Mesh>
+
 
 <THR.Mesh
   dispose = {true}

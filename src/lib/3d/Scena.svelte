@@ -2,7 +2,7 @@
   import { useGltf } from '@threlte/extras'; 
   import { derived } from 'svelte/store';
   import * as THR from '@threlte/core';
-  import * as Three from 'three';
+  import type Three from 'three';
   import { onMount, onDestroy } from 'svelte'
 
   const { gltf } = useGltf('/3d/scena.gltf', {
@@ -22,9 +22,6 @@
       return (gltf.nodes.STUDIO as Three.Mesh).geometry
     })
   });
-  
-  let screen = "/img/tlo.jpg"
-  let camScreen = new Three.TextureLoader().load( screen ); 
 </script>
 
 
@@ -36,7 +33,7 @@
   scale = {0.8}
   castShadow
   receiveShadow
-  position = {{x:2, y:0.2, z:3}}
+  position = {{x:1.5, y:0.2, z:2.5}}
   />
 
     <THR.Object3DInstance 
@@ -95,15 +92,15 @@
   <THR.Object3DInstance 
   dispose = {true}
   object = {$gltf.nodes['camera']} 
-  scale = {1.5}
+  scale = {1.2}
   castShadow
-  position = {{x:-1, y:0, z:-3}}
+  position = {{x:0, y:0, z:-3}}
 
   />
   <THR.Object3DInstance 
   dispose = {true}
   object = {$gltf.nodes['camera1']} 
-  scale = {1.5}
+  scale = {1.2}
   castShadow
   position = {{x:4, y:3, z:9}}
   />

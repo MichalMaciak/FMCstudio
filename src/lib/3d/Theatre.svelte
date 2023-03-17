@@ -51,6 +51,7 @@
   distance = {7}
 />
 
+
 <THR.DirectionalLight 
   dispose = {true}
   color = {colorLight} 
@@ -73,8 +74,8 @@
   target={{x:$offsetX}}
   angle = {45}
   distance = {15}
-  intensity = {5}
-  penumbra = {0.6}
+  intensity = {7}
+  penumbra = {1}
   shadow = {{
     mapSize: [256, 256],
     radius: 5
@@ -90,8 +91,8 @@
   target={{x:$offsetX, z:$offsetY}}
   angle = {55}
   distance = {15}
-  intensity = {5}
-  penumbra = {0.6}
+  intensity = {7}
+  penumbra = {1}
   shadow = {{
     mapSize: [256, 256],
     radius: 5

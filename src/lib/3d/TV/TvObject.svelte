@@ -5,7 +5,7 @@
     import { onMount } from 'svelte';
     import * as Three from 'three';
 
-    const oldWidth = 2000;
+    const oldWidth = 1990;
     const oldHeight = 600;
 
     let screenWidth = 0;
@@ -109,8 +109,8 @@
  
 </script>
 
-<div class="relative">
-    <div class="w-full">
+<div class="relative overflow-hidden">
+    <div class="max-w-fit">
         <THR.Canvas
         dpr = {0.9}
         size = {{width:newWidth, height:newHeight}}
@@ -120,7 +120,7 @@
         > 
 
             <THR.PerspectiveCamera 
-            position={{ x:0, y: 0.5, z: 8 }}
+            position={{ x:0, y: 0, z: 8 }}
             rotation = {{y: 0}}
             fov={25} 
             near={1}

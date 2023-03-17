@@ -1,6 +1,5 @@
 <script>
 	import Theatre from '$lib/3d/Theatre.svelte';
-    import GalleryImage from '$lib/GalleryImage.svelte';
     import SvelteSeo from "svelte-seo";
     import RightImage from '$lib/RightImage.svelte';
     import * as THR from '@threlte/core';
@@ -18,18 +17,46 @@
     
     function scrollToDiv() {
     const section = document.getElementById('text');
-    section.scrollIntoView({ behavior: 'smooth' });
+    if (section){
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+    }
+
+    function scrollToContact() {
+    const sectionContact = document.getElementById('cennik');
+    if (sectionContact){
+    sectionContact.scrollIntoView({ behavior: 'smooth' });
+    }
     }
 </script>
 
 <SvelteSeo
   title="FMC Studio"
   description="Wyprodukujemy dla Ciebie program"
+  canonical="https://fmcstudio.pl/"
+  keywords="produkcja, studio, wynajem, tv, debaty, spotkania, podcast"
+  openGraph={{
+    title: 'FMC Studio',
+    description: 'Wyprodukujemy dla Ciebie program',
+    url: 'https://fmcstudio.pl/',
+    type: 'website',
+    images: [
+      {
+        url: 'https://fmcstduio.pl/s1.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Squatting'
+      },
+    ],
+    site_name: 'FMC Studio'
+
+  }}
 />
 
-<main class="bg-neutral-800">
+<main class="bg-neutral-800 w-full">
 
     <button on:click={scrollToDiv} class="absolute z-50 top-0 text-slate-100 bg-slate-700 p-4">Przewiń na dół</button>
+    <button on:click={scrollToContact} class="absolute z-50 top-0, right-0 text-slate-100 bg-red-500 p-4">Napisz lub zadzwoń</button>
 
     <div class="h-screen w-full ">
         <THR.Canvas 
@@ -48,7 +75,7 @@
     </div>
  
  <section id="text" class="px-4 md:px-24 py-12 md:py-32 w-full">
-     <h1 class="text-3xl md:text-6xl text-sky-300 text-center uppercase font-bold leading-relaxed"> Wyprodukujemy <br> dla Ciebie program</h1>
+     <h1 class="text-3xl md:text-6xl text-sky-300 text-center font-bold leading-relaxed"> -- Wyprodukujemy dla Ciebie program -- </h1>
  </section>
  
 <!--  <div class="w-full">
@@ -79,11 +106,7 @@
     
  </div>
 
- <div class="pt-8 pb-12">
-    
- </div>
-
- <div>
+ <div class="overflow-hidden">
     <TvObject />
  </div>
 

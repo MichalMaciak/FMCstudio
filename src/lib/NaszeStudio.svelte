@@ -1,12 +1,12 @@
-<div class="px-4 md:px-16 pt-8">
+<div class="px-4 md:px-24 pt-8 mb-24">
             
     <section>
-        <h2 id="1" class="text-5xl text-sky-300 pb-8">Nasze studia </h2>
+        <h2 id="1" class="text-5xl text-sky-300 pb-8 font-bold">Nasze studia </h2>
         <p class="pb-8"> Do Twojej dyspozycji mamy trzy studia wyposażone w:</p>
 
-        <h2 id="1" class="text-3xl text-slate-100 pt-12">Studio I - Małe</h2>
+        <h2 id="2" class="text-3xl text-slate-100 pt-12">Studio I - Małe</h2>
 
-        <ul class="pb-8">
+        <ul class="pb-8 list-outside">
             <li>3x kamery - UV510A Series NDI® Full HD PTZ Camera</li>
             <li>3x mikrofony Rode NT1-A</li>
             <li>2x telewizory Samsung 55 cali</li>
@@ -19,9 +19,9 @@
         </ul>
             
                      
-        <h2 id="2" class="text-3xl text-slate-100 pt-12">Studio II - Średnie</h2>    
+        <h2 id="3" class="text-3xl text-slate-100 pt-12">Studio II - Średnie</h2>    
         
-        <ul class="pb-8">
+        <ul class="pb-8 list-outside">
             <li>4x kamery - mCAM II PTZ</li>
             <li>3x mikrofony SAMSON SE10 </li>
             <li>2x Diva-Lite 20 LED</li>
@@ -36,10 +36,10 @@
         </ul>
 
             
-        <h2 id="3" class="text-3xl text-slate-100 pt-12">Studio III - Duże w budowie</h2> 
+        <h2 id="4" class="text-3xl text-slate-100 pt-12">Studio III</h2> 
 
         <ul class="pb-8">
-            <li>6x Blackmagic Studio Camera 4K Plus</li>
+            <!-- <li>6x Blackmagic Studio Camera 4K Plus</li>
             <li>Tekst</li>
             <li>Tekst</li>
             <li>Tekst</li>
@@ -48,7 +48,8 @@
             <li>Tekst</li>
             <li>Tekst</li>
             <li>Tekst</li>
-            <li>Tekst</li>
+            <li>Tekst</li> -->
+            <p class="text-5xl text-red-500 pt-12 text-center">---- W budowie! ----</p>
             
         </ul>
             
